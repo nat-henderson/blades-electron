@@ -1,22 +1,29 @@
 {
-  "name": "electron-quick-start",
+  "name": "blades-clocks",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "pack": "electron-builder -mwl --dir",
+    "dist": "electron-builder -mwl"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "bitd",
+    "rpg"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "nathan",
+  "build" :{
+    "appId": "nathan.blades",
+    "mac": {
+        "category": "public.app-category.games",
+        "target": "dmg"
+    },
+    "win": {
+        "target": "nsis"
+    }
+  },
   "devDependencies": {
-    "electron": "^10.1.2"
+    "electron": "^10.1.2",
+    "electron-builder": "^22.8.1"
   }
 }
